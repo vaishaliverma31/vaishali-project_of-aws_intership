@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student detail</title>
+    <style> 
+          th,td{
+        border: 1px black solid;      
+          }
+    </style>
+</head>
+<body>
+    
+    <h1> user page</h1>
+    
+    {% if stu %}
+    <h1> show data</h1>
+    
+    <table>
+        <tr>
+          <th>id</th>
+          <th>first_name</th>
+          <th>email</th>
+          <th>last_name</th>
+        </tr>
+         {% for st in stu%}
+        <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.first_name}}</td>
+            <td>{{st.email}}</td>
+            <td>{{st.last_name}}</td>
+           
+        </tr>
+        {% endfor %}
+           
+        </table>
+
+    {% else %}
+    <h1> no data</h1>
+    {% endif %}
+    
+</body>
+
+<a href="http://127.0.0.1:8000" add target="_blank">CHAT_WITH_USER
+    <i class="fa fa-github" style="font-size:41px;color:white; margin-left:7px"></i></a>
+
+</html>
+
